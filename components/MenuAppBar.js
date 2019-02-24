@@ -9,19 +9,24 @@ import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import Sidenav from './Sidenav';
 
-const styles = {
+const styles = theme => ({
   appBar: {
     backgroundColor: 'white',
-    flexGrow: 1,
+    marginLeft: theme.env.drawerWidth,
+    [theme.breakpoints.up('md')]: {
+      width: `calc(100% - ${theme.env.drawerWidth})`,
+    },
+  },
+  menuButton: {
+    marginRight: 20,
+    [theme.breakpoints.up('md')]: {
+      display: 'none',
+    },
   },
   grow: {
     flexGrow: 1,
   },
-  menuButton: {
-    marginLeft: -12,
-    marginRight: 20,
-  },
-};
+});
 
 class MenuAppBar extends React.Component {
   state = {

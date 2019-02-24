@@ -10289,14 +10289,17 @@ var theme = Object(__WEBPACK_IMPORTED_MODULE_1__material_ui_core_styles__["creat
       main: '#4E546C'
     },
     secondary: {
-      main: '#03A9F4'
+      main: '#555C78'
     },
-    text: {
-      light: 'white'
+    action: {
+      main: '03A9F4'
     },
     background: {
       default: '#EEF4F9'
     }
+  },
+  env: {
+    drawerWidth: '240px'
   },
   typography: {
     useNextVariants: true

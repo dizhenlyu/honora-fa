@@ -11,14 +11,17 @@ const theme = createMuiTheme({
       main: '#4E546C',
     },
     secondary: {
-      main: '#03A9F4',
+      main: '#555C78',
     },
-    text: {
-      light: 'white'
+    action: {
+      main: '03A9F4'
     },
     background: {
       default: '#EEF4F9'
     }
+  },
+  env: {
+    drawerWidth: '240px'
   },
   typography: {
     useNextVariants: true,

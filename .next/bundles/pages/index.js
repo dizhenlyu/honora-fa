@@ -42,6 +42,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
@@ -52,18 +53,25 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 
 
 
-var styles = {
-  appBar: {
-    backgroundColor: 'white',
-    flexGrow: 1
-  },
-  grow: {
-    flexGrow: 1
-  },
-  menuButton: {
-    marginLeft: -12,
-    marginRight: 20
-  }
+
+
+var styles = function styles(theme) {
+  return {
+    appBar: _defineProperty({
+      backgroundColor: 'white',
+      marginLeft: theme.env.drawerWidth
+    }, theme.breakpoints.up('md'), {
+      width: "calc(100% - ".concat(theme.env.drawerWidth, ")")
+    }),
+    menuButton: _defineProperty({
+      marginRight: 20
+    }, theme.breakpoints.up('md'), {
+      display: 'none'
+    }),
+    grow: {
+      flexGrow: 1
+    }
+  };
 };
 
 var MenuAppBar =
@@ -110,19 +118,19 @@ function (_React$Component) {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 44
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_AppBar___default.a, {
         position: "fixed",
         className: classes.appBar,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 45
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Toolbar___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 49
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_IconButton___default.a, {
         "aria-label": "Open drawer",
@@ -130,36 +138,36 @@ function (_React$Component) {
         onClick: this.handleDrawerToggle,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 50
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__material_ui_icons_Menu___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 55
         }
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_Typography___default.a, {
         variant: "h6",
         className: classes.grow,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 57
         }
       }, "Investment Project Overview"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_IconButton___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 60
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__material_ui_icons_AccountCircle___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 62
         }
       })))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__Sidenav__["a" /* default */], {
         mobileOpen: this.state.mobileOpen,
         handleDrawerToggle: this.handleDrawerToggle.bind(this),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 66
         }
       }));
     }
@@ -285,7 +293,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var drawerWidth = 240;
 
 var styles = function styles(theme) {
   return {
@@ -293,17 +300,16 @@ var styles = function styles(theme) {
       display: 'flex'
     },
     drawer: _defineProperty({}, theme.breakpoints.up('md'), {
-      width: drawerWidth,
+      width: theme.env.drawerWidth,
       flexShrink: 0
     }),
     list: {
       paddingTop: 48
     },
     appBar: _defineProperty({
-      marginLeft: drawerWidth,
-      backgroundColor: '#EEF4F9'
+      marginLeft: theme.env.drawerWidth
     }, theme.breakpoints.up('md'), {
-      width: "calc(100% - ".concat(drawerWidth, "px)")
+      width: "calc(100% - ".concat(theme.env.drawerWidth, ")")
     }),
     menuButton: _defineProperty({
       marginRight: 20
@@ -312,7 +318,7 @@ var styles = function styles(theme) {
     }),
     logobar: _defineProperty({
       height: 56,
-      backgroundColor: '#555C78',
+      backgroundColor: theme.palette.secondary.main,
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center'
@@ -326,7 +332,7 @@ var styles = function styles(theme) {
       height: 80
     }),
     drawerPaper: {
-      width: drawerWidth,
+      width: theme.env.drawerWidth,
       backgroundColor: theme.palette.primary.main
     }
   };
@@ -361,26 +367,26 @@ function (_React$Component) {
       var drawer = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 82
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: classes.logobar,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 83
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
         src: "/static/img/sora-white.svg",
         className: classes.logoImg,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 84
         }
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__material_ui_core_List___default.a, {
         className: classes.list,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 86
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__material_ui_core_ListItem___default.a, {
         button: true,
@@ -388,89 +394,89 @@ function (_React$Component) {
         selected: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 87
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_11__material_ui_core_ListItemIcon___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91
+          lineNumber: 88
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_14__material_ui_icons_TableChart___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91
+          lineNumber: 88
         }
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_12__material_ui_core_ListItemText___default.a, {
         primary: "Investments",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 89
         }
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__material_ui_core_ListItem___default.a, {
         button: true,
         key: "Performance",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 91
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_11__material_ui_core_ListItemIcon___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 95
+          lineNumber: 92
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_13__material_ui_icons_BarChart___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 95
+          lineNumber: 92
         }
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_12__material_ui_core_ListItemText___default.a, {
         primary: "Performance",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96
+          lineNumber: 93
         }
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__material_ui_core_ListItem___default.a, {
         button: true,
         key: "Users",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 95
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_11__material_ui_core_ListItemIcon___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99
+          lineNumber: 96
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__material_ui_icons_Group___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99
+          lineNumber: 96
         }
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_12__material_ui_core_ListItemText___default.a, {
         primary: "Users",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 97
         }
       }))));
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: classes.root,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 104
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("nav", {
         className: classes.drawer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 105
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Hidden___default.a, {
         mdUp: true,
         implementation: "css",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110
+          lineNumber: 107
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_Drawer___default.a, {
         container: this.props.container,
@@ -483,14 +489,14 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 111
+          lineNumber: 108
         }
       }, drawer)), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Hidden___default.a, {
         smDown: true,
         implementation: "css",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 124
+          lineNumber: 121
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_Drawer___default.a, {
         classes: {
@@ -499,7 +505,7 @@ function (_React$Component) {
         variant: "permanent",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 125
+          lineNumber: 122
         }
       }, drawer))));
     }

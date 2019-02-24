@@ -15,15 +15,13 @@ import BarChartIcon from '@material-ui/icons/BarChart';
 import TableChartIcon from '@material-ui/icons/TableChart';
 import { withStyles } from '@material-ui/core/styles';
 
-const drawerWidth = 240;
-
 const styles = theme => ({
   root: {
     display: 'flex',
   },
   drawer: {
     [theme.breakpoints.up('md')]: {
-      width: drawerWidth,
+      width: theme.env.drawerWidth,
       flexShrink: 0,
     },
   },
@@ -31,10 +29,9 @@ const styles = theme => ({
     paddingTop: 48
   },
   appBar: {
-    marginLeft: drawerWidth,
-    backgroundColor: '#EEF4F9',
+    marginLeft: theme.env.drawerWidth,
     [theme.breakpoints.up('md')]: {
-      width: `calc(100% - ${drawerWidth}px)`,
+      width: `calc(100% - ${theme.env.drawerWidth})`,
     },
   },
   menuButton: {
@@ -45,7 +42,7 @@ const styles = theme => ({
   },
   logobar: {  
     height: 56,
-    backgroundColor: '#555C78',
+    backgroundColor: theme.palette.secondary.main,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -63,7 +60,7 @@ const styles = theme => ({
     },
   },
   drawerPaper: {
-    width: drawerWidth,
+    width: theme.env.drawerWidth,
     backgroundColor: theme.palette.primary.main
   },
 });
