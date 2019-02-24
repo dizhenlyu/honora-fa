@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -26,8 +25,13 @@ const styles = theme => ({
       display: 'none',
     },
   },
-  grow: {
+  pageTitle: {
     flexGrow: 1,
+    marginLeft: 0,
+
+    [theme.breakpoints.up('md')]: {
+      marginLeft: 24,
+    },
   },
 });
 
@@ -57,7 +61,7 @@ class MenuAppBar extends React.Component {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" className={classes.grow}>
+            <Typography variant="h6" className={classes.pageTitle}>
               Investment Project Overview
             </Typography>
             <IconButton

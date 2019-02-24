@@ -242,6 +242,11 @@ var theme = Object(__WEBPACK_IMPORTED_MODULE_1__material_ui_core_styles__["creat
       root: {
         color: 'white'
       }
+    },
+    MuiButton: {
+      label: {
+        color: 'white'
+      }
     }
   },
   palette: {
@@ -249,10 +254,10 @@ var theme = Object(__WEBPACK_IMPORTED_MODULE_1__material_ui_core_styles__["creat
       main: '#4E546C'
     },
     secondary: {
-      main: '#555C78'
+      main: '#03A9F4'
     },
-    action: {
-      main: '03A9F4'
+    logoBar: {
+      main: '#555C78'
     },
     background: {
       default: '#EEF4F9'

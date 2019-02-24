@@ -1,11 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AppBar from '@material-ui/core/AppBar';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
-import IconButton from '@material-ui/core/IconButton';
 import GroupIcon from '@material-ui/icons/Group';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -40,9 +36,9 @@ const styles = theme => ({
       display: 'none',
     },
   },
-  logobar: {  
+  logoBar: {  
     height: 56,
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: theme.palette.logoBar.main,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -80,7 +76,7 @@ class ResponsiveDrawer extends React.Component {
 
     const drawer = (
       <div >
-        <div className={classes.logobar}>
+        <div className={classes.logoBar}>
           <img src="/static/img/sora-white.svg" className={classes.logoImg}></img>
         </div>
         <List className={classes.list}>

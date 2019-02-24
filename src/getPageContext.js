@@ -20,16 +20,21 @@ const theme = createMuiTheme({
         color: 'white',
       }
     },
+    MuiButton: {
+      label: {
+        color: 'white'
+      }
+    }
   },
   palette: {
     primary: {
       main: '#4E546C',
     },
     secondary: {
-      main: '#555C78',
+      main: '#03A9F4',
     },
-    action: {
-      main: '03A9F4'
+    logoBar: {
+      main: '#555C78',
     },
     background: {
       default: '#EEF4F9'
