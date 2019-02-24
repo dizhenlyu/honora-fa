@@ -95,7 +95,7 @@ module.exports =
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__material_ui_icons_AccountCircle__ = __webpack_require__("@material-ui/icons/AccountCircle");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__material_ui_icons_AccountCircle___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__material_ui_icons_AccountCircle__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Sidenav__ = __webpack_require__("./components/Sidenav.js");
-var _jsxFileName = "/Users/dizhenlyu/Documents/honora/honora-fa/components/MenuAppBar.js";
+var _jsxFileName = "/Users/dizhenlyu/honora-fa/components/MenuAppBar.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -250,7 +250,7 @@ function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__MenuAppBar__ = __webpack_require__("./components/MenuAppBar.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_ui_core_styles__ = __webpack_require__("@material-ui/core/styles");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_ui_core_styles___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__material_ui_core_styles__);
-var _jsxFileName = "/Users/dizhenlyu/Documents/honora/honora-fa/components/MyLayout.js";
+var _jsxFileName = "/Users/dizhenlyu/honora-fa/components/MyLayout.js";
 
 
 
@@ -320,7 +320,7 @@ var Layout = function Layout(props) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__material_ui_icons_TableChart___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__material_ui_icons_TableChart__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__material_ui_core_styles__ = __webpack_require__("@material-ui/core/styles");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__material_ui_core_styles___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15__material_ui_core_styles__);
-var _jsxFileName = "/Users/dizhenlyu/Documents/honora/honora-fa/components/Sidenav.js";
+var _jsxFileName = "/Users/dizhenlyu/honora-fa/components/Sidenav.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -368,12 +368,6 @@ var styles = function styles(theme) {
     list: {
       paddingTop: 48
     },
-    listItemIcon: {
-      color: theme.palette.text.light
-    },
-    listItemText: {
-      color: theme.palette.text.light
-    },
     appBar: _defineProperty({
       marginLeft: drawerWidth,
       backgroundColor: '#EEF4F9'
@@ -385,20 +379,21 @@ var styles = function styles(theme) {
     }, theme.breakpoints.up('md'), {
       display: 'none'
     }),
-    logobar: {
+    logobar: _defineProperty({
       height: 56,
       backgroundColor: '#555C78',
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'center',
-      '@media (min-width: 600px)': {
-        height: 64
-      }
-    },
-    logoImg: {
-      height: 80,
+      justifyContent: 'center'
+    }, theme.breakpoints.up('sm'), {
+      height: 64
+    }),
+    logoImg: _defineProperty({
+      height: 72,
       margin: 'auto'
-    },
+    }, theme.breakpoints.up('sm'), {
+      height: 80
+    }),
     drawerPaper: {
       width: drawerWidth,
       backgroundColor: theme.palette.primary.main
@@ -435,26 +430,26 @@ function (_React$Component) {
       var drawer = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 85
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: classes.logobar,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 86
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
         src: "/static/img/sora-white.svg",
         className: classes.logoImg,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 87
         }
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__material_ui_core_List___default.a, {
         className: classes.list,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91
+          lineNumber: 89
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__material_ui_core_ListItem___default.a, {
         button: true,
@@ -462,101 +457,89 @@ function (_React$Component) {
         selected: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 90
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_11__material_ui_core_ListItemIcon___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 93
+          lineNumber: 91
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_14__material_ui_icons_TableChart___default.a, {
-        className: classes.listItemIcon,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 93
+          lineNumber: 91
         }
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_12__material_ui_core_ListItemText___default.a, {
         primary: "Investments",
-        classes: {
-          primary: this.props.classes.listItemText
-        },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 92
         }
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__material_ui_core_ListItem___default.a, {
         button: true,
         key: "Performance",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96
+          lineNumber: 94
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_11__material_ui_core_ListItemIcon___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 95
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_13__material_ui_icons_BarChart___default.a, {
-        className: classes.listItemIcon,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 95
         }
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_12__material_ui_core_ListItemText___default.a, {
         primary: "Performance",
-        classes: {
-          primary: this.props.classes.listItemText
-        },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 96
         }
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__material_ui_core_ListItem___default.a, {
         button: true,
         key: "Users",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 98
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_11__material_ui_core_ListItemIcon___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 99
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__material_ui_icons_Group___default.a, {
-        className: classes.listItemIcon,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 99
         }
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_12__material_ui_core_ListItemText___default.a, {
         primary: "Users",
-        classes: {
-          primary: this.props.classes.listItemText
-        },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 100
         }
       }))));
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: classes.root,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 109
+          lineNumber: 107
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("nav", {
         className: classes.drawer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110
+          lineNumber: 108
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Hidden___default.a, {
         mdUp: true,
         implementation: "css",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 112
+          lineNumber: 110
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_Drawer___default.a, {
         container: this.props.container,
@@ -569,14 +552,14 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 113
+          lineNumber: 111
         }
       }, drawer)), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Hidden___default.a, {
         smDown: true,
         implementation: "css",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 126
+          lineNumber: 124
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_Drawer___default.a, {
         classes: {
@@ -585,7 +568,7 @@ function (_React$Component) {
         variant: "permanent",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 127
+          lineNumber: 125
         }
       }, drawer))));
     }
@@ -616,7 +599,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__investments_js__ = __webpack_require__("./pages/investments.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_MyLayout_js__ = __webpack_require__("./components/MyLayout.js");
-var _jsxFileName = "/Users/dizhenlyu/Documents/honora/honora-fa/pages/index.js";
+var _jsxFileName = "/Users/dizhenlyu/honora-fa/pages/index.js";
 
 
 
@@ -661,7 +644,7 @@ var _jsxFileName = "/Users/dizhenlyu/Documents/honora/honora-fa/pages/index.js";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__material_ui_core_styles__ = __webpack_require__("@material-ui/core/styles");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__material_ui_core_styles___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__material_ui_core_styles__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_MyLayout_js__ = __webpack_require__("./components/MyLayout.js");
-var _jsxFileName = "/Users/dizhenlyu/Documents/honora/honora-fa/pages/investments.js";
+var _jsxFileName = "/Users/dizhenlyu/honora-fa/pages/investments.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 

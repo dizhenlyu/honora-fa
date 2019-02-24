@@ -23,6 +23,18 @@ const theme = createMuiTheme({
   typography: {
     useNextVariants: true,
   },
+  overrides: {
+    MuiListItemText: { // Name of the component ⚛️ / style sheet
+      primary: { // Name of the rule
+        color: 'white', // Some CSS
+      },
+    },
+    MuiListItemIcon: {
+      root: {
+        color: 'white',
+      }
+    },
+  },
 });
 
 function createPageContext() {

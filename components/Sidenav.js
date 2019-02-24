@@ -30,12 +30,6 @@ const styles = theme => ({
   list: {
     paddingTop: 48
   },
-  listItemIcon: {
-    color: theme.palette.text.light,
-  },
-  listItemText: {
-    color: theme.palette.text.light,
-  },
   appBar: {
     marginLeft: drawerWidth,
     backgroundColor: '#EEF4F9',
@@ -56,13 +50,17 @@ const styles = theme => ({
     alignItems: 'center',
     justifyContent: 'center',
 
-    '@media (min-width: 600px)': {
-        height: 64,
+    [theme.breakpoints.up('sm')]: {
+      height: 64,
     },
   },
   logoImg: {
-    height: 80,
+    height: 72,
     margin: 'auto',
+
+    [theme.breakpoints.up('sm')]: {
+      height: 80,
+    },
   },
   drawerPaper: {
     width: drawerWidth,
@@ -90,16 +88,16 @@ class ResponsiveDrawer extends React.Component {
         </div>
         <List className={classes.list}>
           <ListItem button key='Investments' selected>
-            <ListItemIcon><TableChartIcon className={classes.listItemIcon}/></ListItemIcon>
-            <ListItemText primary='Investments' classes={{ primary: this.props.classes.listItemText }}/>
+            <ListItemIcon><TableChartIcon /></ListItemIcon>
+            <ListItemText primary='Investments' />
           </ListItem>
           <ListItem button key='Performance'>
-            <ListItemIcon><BarChartIcon className={classes.listItemIcon}/></ListItemIcon>
-            <ListItemText primary='Performance' classes={{ primary: this.props.classes.listItemText }}/>
+            <ListItemIcon><BarChartIcon /></ListItemIcon>
+            <ListItemText primary='Performance' />
           </ListItem>
           <ListItem button key='Users'>
-            <ListItemIcon><GroupIcon className={classes.listItemIcon}/></ListItemIcon>
-            <ListItemText primary='Users' classes={{ primary: this.props.classes.listItemText }}/>
+            <ListItemIcon><GroupIcon /></ListItemIcon>
+            <ListItemText primary='Users' />
           </ListItem>
         </List>
       </div>
