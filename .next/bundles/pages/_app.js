@@ -10284,25 +10284,8 @@ function (_App) {
 // It's optional.
 
 var theme = Object(__WEBPACK_IMPORTED_MODULE_1__material_ui_core_styles__["createMuiTheme"])({
-  palette: {
-    primary: {
-      main: '#4E546C'
-    },
-    secondary: {
-      main: '#555C78'
-    },
-    action: {
-      main: '03A9F4'
-    },
-    background: {
-      default: '#EEF4F9'
-    }
-  },
   env: {
     drawerWidth: '240px'
-  },
-  typography: {
-    useNextVariants: true
   },
   overrides: {
     MuiListItemText: {
@@ -10318,6 +10301,24 @@ var theme = Object(__WEBPACK_IMPORTED_MODULE_1__material_ui_core_styles__["creat
         color: 'white'
       }
     }
+  },
+  palette: {
+    primary: {
+      main: '#4E546C'
+    },
+    secondary: {
+      main: '#555C78'
+    },
+    action: {
+      main: '03A9F4'
+    },
+    background: {
+      default: '#EEF4F9'
+    }
+  },
+  shadows: ["none"],
+  typography: {
+    useNextVariants: true
   }
 });
 

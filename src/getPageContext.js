@@ -6,6 +6,21 @@ import green from '@material-ui/core/colors/green';
 // A theme with custom primary and secondary color.
 // It's optional.
 const theme = createMuiTheme({
+  env: {
+    drawerWidth: '240px'
+  },
+  overrides: {
+    MuiListItemText: { // Name of the component ⚛️ / style sheet
+      primary: { // Name of the rule
+        color: 'white', // Some CSS
+      },
+    },
+    MuiListItemIcon: {
+      root: {
+        color: 'white',
+      }
+    },
+  },
   palette: {
     primary: {
       main: '#4E546C',
@@ -20,23 +35,9 @@ const theme = createMuiTheme({
       default: '#EEF4F9'
     }
   },
-  env: {
-    drawerWidth: '240px'
-  },
+  shadows: ["none"],
   typography: {
     useNextVariants: true,
-  },
-  overrides: {
-    MuiListItemText: { // Name of the component ⚛️ / style sheet
-      primary: { // Name of the rule
-        color: 'white', // Some CSS
-      },
-    },
-    MuiListItemIcon: {
-      root: {
-        color: 'white',
-      }
-    },
   },
 });
 

@@ -57,6 +57,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var styles = function styles(theme) {
   return {
+    root: {
+      flexGrow: 1
+    },
     appBar: _defineProperty({
       backgroundColor: 'white',
       marginLeft: theme.env.drawerWidth
@@ -116,21 +119,22 @@ function (_React$Component) {
     value: function render() {
       var classes = this.props.classes;
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: classes.root,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 47
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_AppBar___default.a, {
         position: "fixed",
         className: classes.appBar,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 48
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Toolbar___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 52
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_IconButton___default.a, {
         "aria-label": "Open drawer",
@@ -138,36 +142,36 @@ function (_React$Component) {
         onClick: this.handleDrawerToggle,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 53
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__material_ui_icons_Menu___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 58
         }
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_Typography___default.a, {
         variant: "h6",
         className: classes.grow,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 60
         }
       }, "Investment Project Overview"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_IconButton___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 63
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__material_ui_icons_AccountCircle___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 65
         }
       })))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__Sidenav__["a" /* default */], {
         mobileOpen: this.state.mobileOpen,
         handleDrawerToggle: this.handleDrawerToggle.bind(this),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 69
         }
       }));
     }
@@ -304,7 +308,7 @@ var styles = function styles(theme) {
       flexShrink: 0
     }),
     list: {
-      paddingTop: 48
+      paddingTop: 56
     },
     appBar: _defineProperty({
       marginLeft: theme.env.drawerWidth
@@ -18954,6 +18958,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 
@@ -18969,12 +18975,11 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 
 var styles = function styles(theme) {
   return {
-    root: {
-      textAlign: 'center',
-      paddingTop: theme.spacing.unit * 20,
-      flexGrow: 1,
-      padding: theme.spacing.unit * 3
-    }
+    root: _defineProperty({
+      margin: '120px 92px auto'
+    }, theme.breakpoints.up('md'), {
+      margin: '120px 92px auto 264px'
+    })
   };
 };
 
@@ -19027,13 +19032,13 @@ function (_React$Component) {
     value: function render() {
       var classes = this.props.classes;
       var open = this.state.open;
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        className: classes.root,
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__components_MyLayout_js__["a" /* default */], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 46
         }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__components_MyLayout_js__["a" /* default */], {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: classes.root,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 47

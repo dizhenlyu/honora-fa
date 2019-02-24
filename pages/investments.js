@@ -14,10 +14,10 @@ import Layout from '../components/MyLayout.js'
 
 const styles = theme => ({
   root: {
-    textAlign: 'center',
-    paddingTop: theme.spacing.unit * 20,
-    flexGrow: 1,
-    padding: theme.spacing.unit * 3,
+    margin: '120px 92px auto',
+    [theme.breakpoints.up('md')]: {
+      margin: '120px 92px auto 264px',
+    },
   },
 });
 
@@ -43,32 +43,32 @@ class Investments extends React.Component {
     const { open } = this.state;
 
     return (
-      <div className={classes.root}>
         <Layout>
-          <Dialog open={open} onClose={this.handleClose}>
-            <DialogTitle>Super Secret Password</DialogTitle>
-            <DialogContent>
-              <DialogContentText>1-2-3-4-5</DialogContentText>
-            </DialogContent>
-            <DialogActions>
-              <Button color="primary" onClick={this.handleClose}>
-                OK
-              </Button>
-            </DialogActions>
-          </Dialog>
-          <Typography variant="h4" gutterBottom>
-            Material-UI
-          </Typography>
-          <Typography variant="subtitle1" gutterBottom>
-            example project
-          </Typography>
-          <Typography gutterBottom>
-          </Typography>
-          <Button variant="contained" color="secondary" onClick={this.handleClick}>
-            Super Secret Password
-          </Button>
+          <div className={classes.root}>
+            <Dialog open={open} onClose={this.handleClose}>
+              <DialogTitle>Super Secret Password</DialogTitle>
+              <DialogContent>
+                <DialogContentText>1-2-3-4-5</DialogContentText>
+              </DialogContent>
+              <DialogActions>
+                <Button color="primary" onClick={this.handleClose}>
+                  OK
+                </Button>
+              </DialogActions>
+            </Dialog>
+            <Typography variant="h4" gutterBottom>
+              Material-UI
+            </Typography>
+            <Typography variant="subtitle1" gutterBottom>
+              example project
+            </Typography>
+            <Typography gutterBottom>
+            </Typography>
+            <Button variant="contained" color="secondary" onClick={this.handleClick}>
+              Super Secret Password
+            </Button>
+          </div>
         </Layout>
-      </div>
     );
   }
 }

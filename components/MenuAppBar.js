@@ -10,6 +10,9 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import Sidenav from './Sidenav';
 
 const styles = theme => ({
+  root: {
+    flexGrow: 1
+  },
   appBar: {
     backgroundColor: 'white',
     marginLeft: theme.env.drawerWidth,
@@ -41,7 +44,7 @@ class MenuAppBar extends React.Component {
     const { classes } = this.props;
 
     return (
-      <div>
+      <div className={classes.root}>
         <AppBar 
           position="fixed"
           className={classes.appBar}

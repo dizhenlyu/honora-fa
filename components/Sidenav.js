@@ -26,7 +26,7 @@ const styles = theme => ({
     },
   },
   list: {
-    paddingTop: 48
+    paddingTop: 56
   },
   appBar: {
     marginLeft: theme.env.drawerWidth,
