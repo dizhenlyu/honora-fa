@@ -10,6 +10,9 @@ import TableRow from '@material-ui/core/TableRow';
 import TableSortLabel from '@material-ui/core/TableSortLabel';
 import Tooltip from '@material-ui/core/Tooltip'
 import Paper from '@material-ui/core/Paper';
+import EditIcon from '@material-ui/icons/Edit';
+import DeleteIcon from '@material-ui/icons/Delete';
+import IconButton from '@material-ui/core/IconButton';
 
 let counter = 0;
 function createData(name, amount, dateCompleted, dateAdded) {
@@ -84,6 +87,7 @@ class EnhancedTableHead extends React.Component {
             ),
             this,
           )}
+          <TableCell align='right'>Actions</TableCell>
         </TableRow>
       </TableHead>
     );
@@ -109,6 +113,9 @@ const styles = theme => ({
   tableWrapper: {
     overflowX: 'auto',
   },
+  iconButton: {
+    padding: '5px'
+  }
 });
 
 class EnhancedTable extends React.Component {
@@ -187,6 +194,10 @@ class EnhancedTable extends React.Component {
                       <TableCell align="right">{n.amount}</TableCell>
                       <TableCell align="right">{n.dateCompleted}</TableCell>
                       <TableCell align="right">{n.dateAdded}</TableCell>
+                      <TableCell align="right">
+                        <IconButton className={classes.iconButton}><EditIcon/></IconButton>
+                        <IconButton className={classes.iconButton}><DeleteIcon/></IconButton>
+                      </TableCell>
                     </TableRow>
                   );
                 })}

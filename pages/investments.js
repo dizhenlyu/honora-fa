@@ -16,6 +16,9 @@ const styles = theme => ({
     [theme.breakpoints.down('sm')]: {
       margin: '120px 36px auto',
     },
+    [theme.breakpoints.down('xs')]: {
+      margin: '120px 18px auto',
+    },
   },
   button: {
     float: 'right'
