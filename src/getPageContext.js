@@ -7,13 +7,22 @@ import green from '@material-ui/core/colors/green';
 // It's optional.
 const theme = createMuiTheme({
   env: {
-    drawerWidth: '240px'
+    drawerWidth: '210px'
   },
   overrides: {
     MuiListItemText: { // Name of the component ⚛️ / style sheet
       primary: { // Name of the rule
         color: 'white', // Some CSS
       },
+    },
+    MuiListItem: {
+      root: {
+        paddingTop: 17,
+        paddingBottom: 17
+      },
+      selected: {
+        backgroundColor: '#03A9F4!important',
+      }
     },
     MuiListItemIcon: {
       root: {
@@ -40,7 +49,6 @@ const theme = createMuiTheme({
       default: '#EEF4F9'
     }
   },
-  shadows: ["none"],
   typography: {
     useNextVariants: true,
   },

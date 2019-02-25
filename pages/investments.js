@@ -11,7 +11,7 @@ const styles = theme => ({
   root: {
     margin: '120px 92px auto',
     [theme.breakpoints.up('md')]: {
-      margin: '120px 48px auto 288px',
+      margin: '120px 48px auto 258px',
     },
     [theme.breakpoints.down('sm')]: {
       margin: '120px 36px auto',

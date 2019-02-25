@@ -14,6 +14,7 @@ const styles = theme => ({
   },
   appBar: {
     backgroundColor: 'white',
+    boxShadow: 'none',
     marginLeft: theme.env.drawerWidth,
     [theme.breakpoints.up('md')]: {
       width: `calc(100% - ${theme.env.drawerWidth})`,
@@ -28,6 +29,7 @@ const styles = theme => ({
   pageTitle: {
     flexGrow: 1,
     marginLeft: 0,
+    fontSize: '1.15rem',
 
     [theme.breakpoints.up('md')]: {
       marginLeft: 24,
@@ -61,7 +63,7 @@ class MenuAppBar extends React.Component {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" className={classes.pageTitle}>
+            <Typography variant="h6" className={classes.pageTitle} color="primary">
               Investment Project Overview
             </Typography>
             <IconButton

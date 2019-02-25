@@ -120,8 +120,8 @@ const styles = theme => ({
 
 class EnhancedTable extends React.Component {
   state = {
-    order: 'asc',
-    orderBy: 'name',
+    order: 'desc',
+    orderBy: 'dateAdded',
     data: [
       createData('Cupcake', '305,000', '12/22/2018', '12/23/2018'),
       createData('Donut', '452,000', '11/26/2018', '11/29/2018'),

@@ -7,8 +7,8 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import BarChartIcon from '@material-ui/icons/BarChart';
-import TableChartIcon from '@material-ui/icons/TableChart';
+import TrendingUpIcon from '@material-ui/icons/TrendingUp';
+import DescriptionIcon from '@material-ui/icons/Description';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
@@ -52,12 +52,14 @@ const styles = theme => ({
     margin: 'auto',
 
     [theme.breakpoints.up('sm')]: {
-      height: 80,
+      height: 75,
+      paddingTop: 4,
     },
   },
   drawerPaper: {
     width: theme.env.drawerWidth,
-    backgroundColor: theme.palette.primary.main
+    backgroundColor: theme.palette.primary.main,
+    borderRight: 0,
   },
 });
 
@@ -81,11 +83,11 @@ class ResponsiveDrawer extends React.Component {
         </div>
         <List className={classes.list}>
           <ListItem button key='Investments' selected>
-            <ListItemIcon><TableChartIcon /></ListItemIcon>
+            <ListItemIcon><DescriptionIcon /></ListItemIcon>
             <ListItemText primary='Investments' />
           </ListItem>
           <ListItem button key='Performance'>
-            <ListItemIcon><BarChartIcon /></ListItemIcon>
+            <ListItemIcon><TrendingUpIcon /></ListItemIcon>
             <ListItemText primary='Performance' />
           </ListItem>
           <ListItem button key='Users'>
