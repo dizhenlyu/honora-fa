@@ -108,7 +108,7 @@ const styles = theme => ({
     float: 'left'
   },
   table: {
-    minWidth: 624,
+    minWidth: 400,
   },
   tableWrapper: {
     overflowX: 'auto',
