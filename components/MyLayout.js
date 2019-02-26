@@ -20,11 +20,11 @@ const styles = theme => ({
 class Layout extends React.Component {
 
   render() {
-    const { classes } = this.props;
+    const { classes, pageOn } = this.props;
 
     return (
       <div className={classes.root}>
-        <MenuAppBar />
+        <MenuAppBar pageOn={pageOn} />
         <div className={classes.child}>
           {this.props.children}
         </div>

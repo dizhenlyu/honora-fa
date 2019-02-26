@@ -10,6 +10,13 @@ import ListItemText from '@material-ui/core/ListItemText';
 import TrendingUpIcon from '@material-ui/icons/TrendingUp';
 import DescriptionIcon from '@material-ui/icons/Description';
 import { withStyles } from '@material-ui/core/styles';
+import { Link } from '@material-ui/core';
+
+const links = [
+  { id: 'investments', label: 'Investments', icon: <DescriptionIcon /> },
+  { id: 'performance', label: 'Performance', icon: <TrendingUpIcon /> },
+  { id: 'users', label: 'Users', icon: <GroupIcon /> },
+];
 
 const styles = theme => ({
   root: {
@@ -23,6 +30,11 @@ const styles = theme => ({
   },
   list: {
     paddingTop: 56
+  },
+  linkItem: {
+    '&:hover': {
+      textDecoration: 'none'
+    }
   },
   appBar: {
     marginLeft: theme.env.drawerWidth,
@@ -74,26 +86,27 @@ class ResponsiveDrawer extends React.Component {
   }
 
   render() {
-    const { classes, theme } = this.props;
+    const { classes, theme, pageOn } = this.props;
 
     const drawer = (
       <div >
-        <div className={classes.logoBar}>
-          <img src="/static/img/sora-white.svg" className={classes.logoImg}></img>
-        </div>
+        <Link href='/'>
+          <div className={classes.logoBar}>
+            <img src="/static/img/sora-white.svg" className={classes.logoImg}></img>
+          </div>
+        </Link>
         <List className={classes.list}>
-          <ListItem button key='Investments' selected>
-            <ListItemIcon><DescriptionIcon /></ListItemIcon>
-            <ListItemText primary='Investments' />
-          </ListItem>
-          <ListItem button key='Performance'>
-            <ListItemIcon><TrendingUpIcon /></ListItemIcon>
-            <ListItemText primary='Performance' />
-          </ListItem>
-          <ListItem button key='Users'>
-            <ListItemIcon><GroupIcon /></ListItemIcon>
-            <ListItemText primary='Users' />
-          </ListItem>
+          {links.map(
+            link => (
+              <Link href={link.id} className={classes.linkItem}>
+                <ListItem button key={link.id} selected={link.id === pageOn.id}>
+                  <ListItemIcon>{link.icon}</ListItemIcon>
+                  <ListItemText primary={link.label} />
+                </ListItem>
+              </Link>
+            ),
+            this,
+          )}
         </List>
       </div>
     );
@@ -108,6 +121,7 @@ class ResponsiveDrawer extends React.Component {
               variant="temporary"
               anchor={theme.direction === 'rtl' ? 'right' : 'left'}
               open={this.props.mobileOpen}
+              pageOn={this.props.pageOn}
               onClose={this.handleDrawerToggle}
               classes={{
                 paper: classes.drawerPaper,
@@ -122,6 +136,7 @@ class ResponsiveDrawer extends React.Component {
                 paper: classes.drawerPaper,
               }}
               variant="permanent"
+              pageOn={this.props.pageOn}
             >
               {drawer}
             </Drawer>

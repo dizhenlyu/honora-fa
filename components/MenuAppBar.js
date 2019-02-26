@@ -47,7 +47,7 @@ class MenuAppBar extends React.Component {
   };
 
   render() {
-    const { classes } = this.props;
+    const { classes, pageOn } = this.props;
 
     return (
       <div className={classes.root}>
@@ -64,7 +64,7 @@ class MenuAppBar extends React.Component {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" className={classes.pageTitle} color="primary">
-              Investment Project Overview
+              {pageOn.title}
             </Typography>
             <IconButton
             >
@@ -75,6 +75,7 @@ class MenuAppBar extends React.Component {
         <Sidenav 
           mobileOpen={this.state.mobileOpen} 
           handleDrawerToggle={this.handleDrawerToggle.bind(this)}
+          pageOn={pageOn}
         >
         </Sidenav>
       </div>

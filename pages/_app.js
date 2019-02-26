@@ -27,11 +27,6 @@ class MyApp extends App {
         <Head>
           <title>Honora</title>
         </Head>
-        <style jsx global>{`
-          body { 
-            background: #EEF4F9;
-          }
-        `}</style>
         {/* Wrap every page in Jss and Theme providers */}
         <JssProvider
           registry={this.pageContext.sheetsRegistry}

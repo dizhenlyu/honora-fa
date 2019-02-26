@@ -19,7 +19,7 @@ class Investments extends React.Component {
     const { classes } = this.props;
 
     return (
-        <Layout>
+        <Layout pageOn={{id: 'investments', title: 'Investment Project Overview'}}>
           <Button variant="contained" color="secondary" className={classes.button}>
             Add New Investment
           </Button>
